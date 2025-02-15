@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Port1.css">
+    <title>SRM Portfolio Studio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#home" class="logo" ><span id="logofirst">SRM</span></a>
+
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#education">Education</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Hi, It's <span id="name">D Sree Ram</span></h1>
+            <h3 class="text-animation">I'm a <span id="display-typing-text"></span></h3>
+            <p id="about">I’m passionate about solving complex problems and continuously expanding my knowledge in computer science. I thrive in competitive environments that challenge me to push boundaries and innovate. My goal is to contribute meaningfully to a dynamic team while growing both technically and professionally.</p>
+
+            <div class="social-icons">
+                <a href="#" id="linkedinlink" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" id="githublink" target="_blank"><i class='bx bxl-github'></i></a>
+            </div>
+
+            <div class="btn-group">
+                <a href="#" class="btn" id="display-resume">Hire</a>
+                <a href="#contact" class="btn">Contact</a>
+            </div>
+        </div>
+        <div class="home-img">
+            <img src="profilepic.jpg" alt="" id="image">
+        </div>
+    </section>
+
+    <section class="education" id="education">
+        <h2 class="heading">Education</h2>
+
+        <div class="timeline-items">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date" id="internshipyear">2024</div>
+                <div class="timeline-content">
+                    <h3>Internship</h3>
+                    <p id="internshipname">Codsoft Internship
+                        I completed my UI/UX design internship at CodSoft, gaining hands-on experience in creating user-centered designs.</p>
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date" id="degreeyear">2022-2025</div>
+                <div class="timeline-content">
+                    <h3> BTech/Degree</h3>
+                    <p id="degreename">Gitam University
+                        I completed my Bachelor’s in Computer Science at GITAM University, building a solid foundation in technology and problem-solving.</p>
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date" id="intermediateyear">2020-2022</div>
+                <div class="timeline-content">
+                    <h3>Inntermediate</h3>
+                    <p id="intermediatename">Sri Chaitanya Junior College
+                        I completed my Intermediate in BiPC (Biology, Physics, and Chemistry), building a strong foundation in the sciences.</p>
+                </div>
+
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date" id="schoolyear">2020</div>
+                <div class="timeline-content">
+                    <h3>Secondary Education</h3>
+                    <p id="schoolname">Bhashyam High School
+                        I completed my secondary education at Bhashyam High School, building a strong academic foundation.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="heading">Services</h2>
+
+        <div class="services-container">
+            <div class="service-box">
+                <div class="service-info">
+                    <h4 id="service1name">Photography</h4>
+                    <p id="service1des">I capture stunning and expressive photographs, focusing on detail, creativity, and storytelling. From nature and wildlife to portraits, I bring moments to life through my lens. 🚀✨</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4 id="service2name">Web Development</h4>
+                    <p id="service2des">I create responsive and dynamic websites, handling both frontend design with HTML, CSS, JavaScript and backend development using PHP and databases. 🚀</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4 id="service3name">Portfolio Building</h4>
+                    <p id="service3des">I design professional and personalized portfolios to showcase your skills, projects, and achievements effectively. ✨</p>
+                </div>
+            </div>
+
+            <div class="service-box">
+                <div class="service-info">
+                    <h4 id="service4name">UI/UX Design</h4>
+                    <p id="service4des">I craft intuitive and visually appealing designs, ensuring a seamless user experience. From wireframing to prototyping, I focus on usability, accessibility, and modern design trends. ✨</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+
+        <form action="">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number">
+                    <input type="text" placeholder="Subject">
+                </div>
+            </div>
+
+            <div class="input-group-2">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <button class="btn" id="downloadBtn"
+            style="display: block; width: fit-content; margin: auto; padding: 10px 20px; text-align: center;">
+            Download
+        </button>
+        <br><br>
+        <div class="social">
+            <a href="#" id="linkedinlink" target="_blank"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" id="githublink" target="_blank"><i class='bx bxl-github'></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="#">FAQ</a>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+            </li>
+
+            <li>
+                <a href="#">About</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+      <!--  <p class="copyright">
+            © <span id="name">Sree Ram </span>| All Rights Reserved
+        </p>-->
+    </footer>
+
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const getItem = (key, defaultValue = "") => localStorage.getItem(key) || defaultValue;
+
+    const logofirst = getItem("logofirst");
+    const name = getItem("name", "Your Name");
+    const typingText = JSON.parse(getItem("typingText", '["Your Role"]')); // Ensures a valid array
+    const about = getItem("about", "About yourself.....");
+    const image = getItem("image");
+    const linkedinlink = getItem("linkedinlink", "#");
+    const githublink = getItem("githublink", "#");
+    const resume = getItem("resume");
+    const themeColor = getItem("themecolor", "#3498db");
+
+    const degreeyear = getItem("degreeyear");
+    const degreename = getItem("degreename");
+    const intermediateyear = getItem("intermediateyear");
+    const intermediatename = getItem("intermediatename");
+    const internshipyear = getItem("internshipyear");
+    const internshipname = getItem("internshipname");
+    const schoolyear = getItem("schoolyear");
+    const schoolname = getItem("schoolname");
+
+    const service1name = getItem("service1name");
+    const service1des = getItem("service1des");
+    const service2name = getItem("service2name");
+    const service2des = getItem("service2des");
+    const service3name = getItem("service3name");
+    const service3des = getItem("service3des");
+    const service4name = getItem("service4name");
+    const service4des = getItem("service4des");
+
+    // Apply theme color
+    document.documentElement.style.setProperty("--main-color", themeColor);
+
+    // Helper function to set element text
+    const setText = (id, text) => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = text;
+    };
+
+    // Set text content for elements
+    setText("logofirst", logofirst);
+    setText("name", name);
+    setText("about", about);
+    setText("degreeyear", degreeyear);
+    setText("degreename", degreename);
+    setText("intermediateyear", intermediateyear);
+    setText("intermediatename", intermediatename);
+    setText("internshipyear", internshipyear);
+    setText("internshipname", internshipname);
+    setText("schoolyear", schoolyear);
+    setText("schoolname", schoolname);
+    setText("service1name", service1name);
+    setText("service1des", service1des);
+    setText("service2name", service2name);
+    setText("service2des", service2des);
+    setText("service3name", service3name);
+    setText("service3des", service3des);
+    setText("service4name", service4name);
+    setText("service4des", service4des);
+
+    // Set profile image
+    const imageElement = document.getElementById("image");
+    if (image && imageElement) imageElement.src = image;
+
+    // Cycle through the typing text
+    const typingContainer = document.getElementById("display-typing-text");
+    if (typingContainer) {
+        let currentIndex = 0;
+        typingContainer.textContent = typingText[currentIndex];
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % typingText.length;
+            typingContainer.textContent = typingText[currentIndex];
+        }, 3000); // Adjust the interval duration as needed
+    }
+
+    // Set LinkedIn & GitHub links
+    const setLink = (id, url) => {
+        const el = document.getElementById(id);
+        if (el) el.href = url;
+    };
+    setLink("linkedinlink", linkedinlink);
+    setLink("githublink", githublink);
+
+    // Handle resume download
+    const resumeLink = document.getElementById("display-resume");
+    if (resume && resumeLink) {
+        resumeLink.href = resume;
+        resumeLink.download = "Resume.pdf";
+        resumeLink.textContent = "Download Resume";
+    }
+});
+
+
+
+    </script>
+
+
+
+
+
+    <script src="Port1.js"></script>
+
+</body>
+
+</html>

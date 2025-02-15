@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRM Portfolio Studio</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <img src="logo.png" class="logo">
+    </div>
+
+
+    <div class="splashscreen">
+        <div class="intro">
+            <h1 class="logo-header">
+                <span class="logo1">S</span><span class="logo1">R</span><span class="logo1">M</span><br>
+                <span class="logo2">Por</span><span class="logo2">tfo</span><span class="logo2">lio</span><br>
+                <span class="logo3">St</span><span class="logo3">ud</span><span class="logo3">io</span>
+            </h1>
+        </div>
+  <!--      <header>
+            <h4>SRM <br> Portfolio<br>Studio</h4>
+        </header> -->
+    </div>
+    <br><br>
+
+    <div class="wrapper" id="form">
+
+
+        <form class="form-container" id="portfolioForm">
+
+            <u><h3 class="fixed-heading">Enter your Details</h3></u>
+
+
+            <!--page 1-->
+            <div class="home">
+
+                <label for="logo">Logo:</label>
+                <input type="text" name="logofirst" placeholder="First Name" required><br><br>
+
+                <label for="name">Name:</label>
+                <input type="text" name="name" placeholder="Name" required><br><br>
+
+                <label for="typingtext">Typing Text (comma-separated):</label>
+                <input type="text" name="typingText" placeholder="e.g., Designer, Developer, Freelancer"
+                    required><br><br>
+
+                <label for="about">About:</label><br>
+                <textarea rows="10" cols="50" name="about" placeholder="About" required></textarea><br><br>
+
+                <label for="image">Upload Image:</label>
+                <input type="file" id="imageUpload" accept="image/*" required><br><br>
+
+                <label for="linkedinlink">Linkedin Link:</label>
+                <input type="url" id="linkedin" name="linkedinlink" placeholder="https://example.com"><br><br>
+
+                <label for="githublink">Github Link:</label>
+                <input type="url" id="github" name="githublink" placeholder="https://example.com"><br><br>
+
+                <label for="resume">Upload Resume (PDF only):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" required><br><br>
+
+            </div>
+            <div class="education">
+                <h3 align="center"><u>Education</u></h3>
+                <!-- Page 2i -->
+                <div class="form-box">
+                    <p><u><i>Internship</i></u></p>
+
+                    <div class="page2i" id="internship"><br>
+                        <label for="year">Year</label>
+                        <input type="text" name="year" id="internshipyear"
+                            placeholder="Starting year - Ending year"><br><br>
+                        <label for="internship">Internship:</label>
+                        <textarea name="internship" id="internshipname" placeholder="Name and details" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Page 2ii -->
+                <div class="form-box">
+                    <p><u><i>BTech/Degree</i></u></p>
+
+                    <div class="page2ii" id="degree"><br>
+
+                        <label for="year">Year</label>
+                        <input type="text" name="year" id="degreeyear"
+                            placeholder="Starting year - Ending year"><br><br>
+                        <label for="degree">BTech/Degree:</label>
+                        <textarea name="degree" id="degreename" placeholder="Name and details" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Page 2iii -->
+                <div class="form-box">
+                    <p><u><i>Intermediate</i></u></p>
+
+                    <div class="page2iii" id="intermediate"><br>
+
+                        <label for="year">Year</label>
+                        <input type="text" name="year" id="intermediateyear"
+                            placeholder="Starting year - Ending year"><br><br>
+                        <label for="intermediate">Intermediate:</label>
+                        <textarea name="intermediate" id="intermediatename" placeholder="Name and details" required></textarea>
+                    </div>
+                </div>
+
+                <!-- Page 2iv -->
+                <div class="form-box">
+                    <p><u><i>Secondary Education</i></u></p>
+
+                    <div class="page2vi" id="school"><br>
+
+                        <label for="year">Year</label>
+                        <input type="text" name="year" id="schoolyear" placeholder="Starting year - Ending year"><br><br>
+                        <label for="school">Secondary Education:</label>
+                        <textarea name="school" id="schoolname" placeholder="Name and details" required></textarea>
+                    </div>
+                </div>
+            </div><br>
+
+            <div class="services">
+                <h3 align="center"><u>Services</u></h3>
+                    <!--service 1-->
+                <div class="container" id="serviceContainer">
+
+                    <h4 align="center"><u>Service 1</u></h4>
+                    <label for="servicename">Service Name:</label>
+                    <input type="text" name="servicename" id="service1name" placeholder="Eg: Frontend Developer" required><br><br>
+                    <label for="serviceabout">Description:</label><br>
+                    <textarea rows="10" cols="30" name="description" id="service1des" placeholder="Describe" required></textarea><br><br>
+                </div>
+
+                <!--service 2-->
+                <div class="container" id="serviceContainer">
+
+                    <h4 align="center"><u>Service 2</u></h4>
+                    <label for="servicename">Service Name:</label>
+                    <input type="text" name="servicename" id="service2name" placeholder="Eg: Backend Developer" required><br><br>
+                    <label for="serviceabout">Description:</label><br>
+                    <textarea rows="10" cols="30" name="description" id="service2des" placeholder="Describe" required></textarea><br><br>
+                </div>
+
+                 <!--service 3-->
+                 <div class="container" id="serviceContainer">
+
+                    <h4 align="center"><u>Service 3</u></h4>
+                    <label for="servicename">Service Name:</label>
+                    <input type="text" name="servicename" id="service3name" placeholder="Eg: Photographer" required><br><br>
+                    <label for="serviceabout">Description:</label><br>
+                    <textarea rows="10" cols="30" name="description" id="service3des" placeholder="Describe" required></textarea><br><br>
+                </div>
+                 <!--service 4-->
+                 <div class="container" id="serviceContainer">
+
+                    <h4 align="center"><u>Service 4</u></h4>
+                    <label for="servicename">Service Name:</label>
+                    <input type="text" name="servicename" id="service4name" placeholder="Eg: UI/UX" required><br><br>
+                    <label for="serviceabout">Description:</label><br>
+                    <textarea rows="10" cols="30" name="description" id="service4des" placeholder="Describe" required></textarea><br><br>
+                </div>
+            </div>
+
+
+            <div class="themecolor">
+                <label for="themecolor">Theme Color:</label>
+                <input type="color" id="themecolor" name="themecolor" required>
+                <span id="colorName">#000000</span> <!-- Default black color -->
+            </div>
+
+
+            <br>
+            <button type="submit" name="submit" class="blink-button">Submit</button>
+
+        </form>
+        
+    </div>
+
+    <script>
+        document.getElementById("portfolioForm").addEventListener("submit", function (e) {
+            e.preventDefault(); // Prevent form submission
+    
+            // Get form data
+            const logofirst = document.querySelector('input[name="logofirst"]').value.trim();
+            const name = document.querySelector('input[name="name"]').value.trim();
+            const typingText = document.querySelector('input[name="typingText"]').value.split(",").map(text => text.trim());
+            const about = document.querySelector('textarea[name="about"]').value.trim();
+            const imageUpload = document.getElementById("imageUpload").files[0];
+            const linkedinlink = document.querySelector('#linkedin').value.trim();
+            const githublink = document.querySelector('#github').value.trim();
+            const resumeFile = document.getElementById("resume").files[0];
+            const degreeyear = document.getElementById("degreeyear").value.trim();
+            const degreename = document.getElementById("degreename").value.trim();
+            const intermediateyear = document.getElementById("intermediateyear").value.trim();
+            const intermediatename = document.getElementById("intermediatename").value.trim();
+            const internshipyear = document.getElementById("internshipyear").value.trim();
+            const internshipname = document.getElementById("internshipname").value.trim();
+            const schoolyear = document.getElementById("schoolyear").value.trim();
+            const schoolname = document.getElementById("schoolname").value.trim();
+    
+            const service1name = document.getElementById("service1name").value.trim();
+            const service1des = document.getElementById("service1des").value.trim();
+            const service2name = document.getElementById("service2name").value.trim();
+            const service2des = document.getElementById("service2des").value.trim();
+            const service3name = document.getElementById("service3name").value.trim();
+            const service3des = document.getElementById("service3des").value.trim();
+            const service4name = document.getElementById("service4name").value.trim();
+            const service4des = document.getElementById("service4des").value.trim();
+    
+            const themecolor = document.querySelector('input[name="themecolor"]').value.trim();
+    
+            // Validate required fields
+            if (!name || !linkedinlink || !githublink) {
+                alert("Please fill in all required fields: Name, LinkedIn, and GitHub.");
+                return;
+            }
+    
+            // Function to save data and open new page
+            function saveAndOpenPortfolio(imageData = "", resumeData = "") {
+                localStorage.setItem("logofirst", logofirst);
+                localStorage.setItem("name", name);
+                localStorage.setItem("typingText", JSON.stringify(typingText));
+                localStorage.setItem("about", about);
+                localStorage.setItem("image", imageData);
+                localStorage.setItem("linkedinlink", linkedinlink);
+                localStorage.setItem("githublink", githublink);
+                localStorage.setItem("resume", resumeData);
+                localStorage.setItem("degreeyear", degreeyear);
+                localStorage.setItem("degreename", degreename);
+                localStorage.setItem("intermediateyear", intermediateyear);
+                localStorage.setItem("intermediatename", intermediatename);
+                localStorage.setItem("internshipyear", internshipyear);
+                localStorage.setItem("internshipname", internshipname);
+                localStorage.setItem("schoolyear", schoolyear); 
+                localStorage.setItem("schoolname", schoolname);
+    
+                localStorage.setItem("service1name", service1name); 
+                localStorage.setItem("service1des", service1des); 
+                localStorage.setItem("service2name", service2name); 
+                localStorage.setItem("service2des", service2des); 
+                localStorage.setItem("service3name", service3name); 
+                localStorage.setItem("service3des", service3des); 
+                localStorage.setItem("service4name", service4name); 
+                localStorage.setItem("service4des", service4des); 
+    
+                localStorage.setItem("themecolor", themecolor);
+    
+                window.open("port1.html", "_blank");
+            }
+    
+            // Convert files to Base64 (if uploaded)
+            if (imageUpload) {
+                const imageReader = new FileReader();
+                imageReader.onload = function (event) {
+                    const imageData = event.target.result;
+    
+                    if (resumeFile) {
+                        const resumeReader = new FileReader();
+                        resumeReader.onload = function (resumeEvent) {
+                            saveAndOpenPortfolio(imageData, resumeEvent.target.result);
+                        };
+                        resumeReader.readAsDataURL(resumeFile);
+                    } else {
+                        saveAndOpenPortfolio(imageData);
+                    }
+                };
+                imageReader.readAsDataURL(imageUpload);
+            } else {
+                if (resumeFile) {
+                    const resumeReader = new FileReader();
+                    resumeReader.onload = function (resumeEvent) {
+                        saveAndOpenPortfolio("", resumeEvent.target.result);
+                    };
+                    resumeReader.readAsDataURL(resumeFile);
+                } else {
+                    alert("Please upload a profile image.");
+                }
+            }
+        });
+    </script>
+    
+    
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

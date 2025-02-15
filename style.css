@@ -1,0 +1,304 @@
+/* Full-Screen Background (Fixed Image) */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    background: url('bg_image.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Keeps background fixed */
+    overflow: hidden; /* Prevents extra scrolling */
+} 
+
+
+
+
+/* Centered Form with Transparent Blur Effect */
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    padding: 60px;
+    padding-top: 5%;
+    background: rgba(255, 255, 255, 0.15); /* Light transparent background */
+    backdrop-filter: blur(10px); /* Blurred Glassmorphism effect */
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    
+    /* Fix top & bottom visibility issues */
+    position: relative;
+    top: 10vh; /* Pushes the form down */
+    max-height: 75vh; /* Prevents form from overflowing */
+    overflow-y: auto; /* Allows scrolling if content overflows */
+    margin-bottom: 25vh; /* Adds space at the bottom */
+}
+
+/* Style Inputs & Textarea */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+/* Placeholder Text */
+input::placeholder, textarea::placeholder {
+    color: #ddd;
+}
+
+/* Headings & Labels */
+h3, label {
+    color: white;
+    text-align: center;
+}
+
+
+/* Form Input Styling */
+input, textarea {
+    width: 100%; /* Keeps input full-width within the form */
+    max-width: 500px; /* Prevents inputs from stretching too wide */
+    padding: 12px; /* Better spacing */
+    border-radius: 8px; /* Smooth rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+    display: block; /* Ensures all inputs align in a column */
+    margin: 5px auto; /* Adds spacing and centers input fields */
+}
+
+/* Label and Input Alignment */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ensures inputs align properly */
+    gap: 15px; /* Spacing between fields */
+}
+
+/* Adjust for textarea */
+textarea {
+    resize: vertical; /* Allows user to expand textarea */
+    min-height: 100px; /* Sets a default height */
+    max-height: 250px; /* Prevents it from growing too large */
+}
+
+/* Headings & Labels */
+h3, label {
+    color: white;
+    text-align: center; /* Align labels properly */
+    width: 100%; /* Ensures labels take full width */
+    max-width: 500px; /* Matches input width */
+}
+
+
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.navbar{
+    position: absolute;
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-bottom: 42%;
+}
+
+
+
+
+
+
+
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #000000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+
+
+/*Theme color*/
+
+.themecolor {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers label and input */
+    gap: 10px; /* Adds spacing */
+}
+
+.themecolor input[type="color"] {
+    width: 100%;  /* Full width like other inputs */
+    max-width: 500px; /* Matches other inputs */
+    height: 40px; /* Increases height to match other inputs */
+    border: none;
+    border-radius: 8px; /* Smooth rounded edges */
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+#colorName {
+    font-size: 16px;
+    font-weight: bold;
+    color: white; /* Change as needed */
+    margin-top: 5px; /* Space below input */
+    text-align: center;
+}
+
+
+
+
+/*Blink submit*/
+
+.blink-button {
+    display: inline-block;
+    padding: 10px 25px;
+    width: 150px; /* Set the width of the button */
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1rem;
+    color: #fbfcfd;
+    letter-spacing: 0.3rem;
+    font-weight: 50;
+    border: 1.5px solid #fbfcfd;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center; /* Ensure text stays centered */
+}
+
+.blink-button:hover {
+    transform: scale(1.03); /* Fixed the incorrect scale3d syntax */
+    background-color: #fbfcfd;
+    color: black;
+    box-shadow: 0 0 25px #fbfbfb;
+}
+
+
+
+
+
+
+
+
+/* splash screen*/
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+/*logo1*/
+.logo1{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo1.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo1.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+/*logo2*/
+.logo2{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo2.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo2.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+/*logo3*/
+.logo3{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo3.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo3.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
