@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRM Portfolio Studio</title>
+    <link rel="stylesheet" href="Portform.css">
     <link rel="icon" type="image/png" href="favicon-32x32.png">
-    <link rel="stylesheet" href="style.css">
+
 
 </head>
 
@@ -14,6 +15,51 @@
 
     <div class="navbar">
         <img src="logo.png" class="logo">
+
+        <div class="help-container">
+            <div class="btn-help" id="btnHelp">
+                ?
+            </div>
+            <div class="help-title" id="helpTitle">
+                <h2 id="heading">Need Help?</h2>
+            </div>
+            <div class="help-body" id="helpBody">
+                <p id="description">
+                    <u><b>Instructions</b></u>:<br><br>
+                    
+                    To get a <b>Responsive Portfolio</b>, you must fill in all the form inputs correctly. If you miss any required fields, the form will not submit, and you will not receive your portfolio.<br><br>
+                
+                    1. <b>Logo:</b> Enter your name (e.g., <i>Sree Ram</i>) or a short form of your name (e.g., <i>SRM</i>). This will be displayed in the top-left corner.<br><br>
+                
+                    2. <b>Name:</b> Enter your full name so visitors know how to address you.<br><br>
+                
+                    3. <b>Typing Text:</b> Enter your skills, separated by commas (e.g., <i>Web Developer, UI/UX Designer, Photographer</i>).<br><br>
+                
+                    4. <b>About:</b> Provide a short description about yourself.<br><br>
+                
+                    5. <b>Upload Image:</b> Upload a <b>professional</b> image of yourself.<br><br>
+                
+                    6. <b>LinkedIn Link:</b> Paste your <b>LinkedIn profile link</b> (you can find it in your LinkedIn profile).<br><br>
+                
+                    7. <b>GitHub Link:</b> Paste your <b>GitHub profile link</b> (you can find it in your GitHub profile).<br><br>
+                
+                    8. <b>Upload Resume:</b> Upload your <b>updated resume</b>.<br><br>
+                
+                    9. <b>Education:</b><br>
+                       - Enter the year of your education (e.g., <i>2022-2025</i> or <i>2024</i>).<br>
+                       - Provide details of your education, including the institution name and a short description of your course or internship.<br><br>
+                
+                    10. <b>Services:</b><br>
+                        - List the services you offer to clients.<br>
+                        - Mention <b>four services</b> along with a brief description of each.<br><br>
+                
+                    11. <b>Theme Color:</b><br>
+                        - Select the theme color for your portfolio.<br>
+                        - <b>Note:</b> The <b>background color</b> will remain black to enhance the user experience.<br><br>
+                </p>
+                
+            </div>
+        </div>
     </div>
 
 
@@ -25,9 +71,7 @@
                 <span class="logo3">St</span><span class="logo3">ud</span><span class="logo3">io</span>
             </h1>
         </div>
-  <!--      <header>
-            <h4>SRM <br> Portfolio<br>Studio</h4>
-        </header> -->
+
     </div>
     <br><br>
 
@@ -37,6 +81,7 @@
         <form class="form-container" id="portfolioForm">
 
             <u><h3 class="fixed-heading">Enter your Details</h3></u>
+
 
 
             <!--page 1-->
@@ -184,7 +229,7 @@
 
     <script>
         document.getElementById("portfolioForm").addEventListener("submit", function (e) {
-            e.preventDefault(); // Prevent form submission
+            e.preventDefault();
     
             // Get form data
             const logofirst = document.querySelector('input[name="logofirst"]').value.trim();
@@ -251,7 +296,7 @@
     
                 localStorage.setItem("themecolor", themecolor);
     
-                window.open("Port1.html", "_blank");
+                window.open("port1.html", "_blank");
             }
     
             // Convert files to Base64 (if uploaded)
@@ -287,7 +332,7 @@
     
     
 
-    <script src="script.js"></script>
+    <script src="Portform.js"></script>
 
 
 </body>

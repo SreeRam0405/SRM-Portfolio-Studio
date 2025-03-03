@@ -1,0 +1,396 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('bg_image.jpg') no-repeat center center/cover;
+    background-attachment: fixed; 
+    overflow: hidden;
+} 
+
+
+
+
+.form-container {
+    width: 80%;
+    max-width: 600px;
+    padding: 60px;
+    padding-top: 5%;
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    
+    
+    position: relative;
+    top: 10vh; 
+    max-height: 75vh; 
+    overflow-y: auto; 
+    margin-bottom: 25vh;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #ddd;
+}
+
+h3, label {
+    color: white;
+    text-align: center;
+}
+
+
+
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px; 
+    border-radius: 8px; 
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+    display: block; 
+    margin: 5px auto; 
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; 
+}
+
+textarea {
+    resize: vertical; 
+    min-height: 100px; 
+    max-height: 250px; 
+}
+
+h3, label {
+    color: white;
+    text-align: center; 
+    width: 100%; 
+    max-width: 500px; 
+}
+
+
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+.navbar{
+    position: absolute;
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1%;
+    padding-bottom: 42%;
+}
+
+
+
+
+
+
+
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #000000;
+}
+
+input:checked + .slider:before {
+    transform: translateX(18px);
+}
+
+
+
+/*Theme color*/
+
+.themecolor {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.themecolor input[type="color"] {
+    width: 100%;  
+    max-width: 500px; 
+    height: 40px; 
+    border: none;
+    border-radius: 8px; 
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+#colorName {
+    font-size: 16px;
+    font-weight: bold;
+    color: white; 
+    margin-top: 5px; 
+    text-align: center;
+}
+
+
+
+
+/*Blink submit*/
+
+.blink-button {
+    display: inline-block;
+    padding: 10px 25px;
+    width: 150px; 
+    background-color: transparent;
+    border-radius: 4rem;
+    font-size: 1rem;
+    color: #fbfcfd;
+    letter-spacing: 0.3rem;
+    font-weight: 50;
+    border: 1.5px solid #fbfcfd;
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-align: center; 
+}
+
+.blink-button:hover {
+    transform: scale(1.03); 
+    background-color: #fbfcfd;
+    color: black;
+    box-shadow: 0 0 25px #fbfbfb;
+}
+
+
+
+
+
+
+
+
+/* splash screen*/
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+/*logo1*/
+.logo1{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo1.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo1.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+/*logo2*/
+.logo2{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo2.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo2.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+/*logo3*/
+.logo3{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo3.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo3.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+
+
+
+/*Need Help*/
+* {box-sizing: border-box;}
+
+body{
+    font-family: arial;
+}
+
+.help-container {
+    width: 400px;
+    height: 520px;
+    position: absolute;
+    top: 20px;
+    left: 800px;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden; 
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btn-help{
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(rgba(211, 211, 211, 0.5), rgba(164, 0, 209, 0.5));
+    border-radius: 25px;
+    border: 2px solid white;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 8px 14px;
+    position: absolute;
+    top: 0; left: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.help-title{
+    width: 0;
+    height: 50px;
+    background: linear-gradient(rgba(211, 211, 211, 0.5), rgba(164, 0, 209, 0.5));
+    position: absolute;
+    top: 0; left: 25px;
+    border-radius: 0 25px 0 0;
+}
+
+.help-title h2 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: none;
+    padding: 12px 35px;
+}
+
+.help-body {
+    width: 100%;
+    max-height: 450px;
+    background: gray;
+    position: relative;
+    top: 50px;
+    left: 0;
+    text-align: justify;
+    border-radius: 0 0 25px 25px;
+    display: none;
+    overflow-y: auto; 
+    padding: 15px; 
+    transition: max-height 0.5s ease-in-out; 
+}
+
+
+.help-body p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: none;
+    padding: 12px 35px;
+}
+
+@keyframes fadein-right{
+    0% { opacity: 0; margin-left: 45px;}
+    100% { opacity: 1; margin-left: 0;}
+}
+
+@keyframes fadein-bottom{
+    0% {opacity: 0; margin-top: 45px;}
+    100% {opacity: 1; margin-top: 0;}
+}
+
+@keyframes fadeout-right {
+    0% {opacity: 1; margin-left: 0;}
+    100% {opacity: 0; margin-left: 45px;}
+}
+
+@keyframes fadeout-bottom{
+    0%{opacity: 1; margin-top: 0;}
+    100%{opacity: 0; margin-top: 45px;}
+}
