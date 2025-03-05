@@ -15,7 +15,6 @@
 
     <div class="navbar">
         <img src="logo.png" class="logo">
-
         <div class="help-container">
             <div class="btn-help" id="btnHelp">
                 ?
@@ -52,8 +51,16 @@
                     10. <b>Services:</b><br>
                         - List the services you offer to clients.<br>
                         - Mention <b>four services</b> along with a brief description of each.<br><br>
+
+                    11. <b>Formspree Link :</b><br>
+                            - Go to <a href="https://formspree.io/" target="_blank">Formspree.io</a> and sign up using your email.<br>
+                            - On the left-hand side, click on "+ Add New" and select "New Form".<br>
+                            - Enter the required details and provide your email address.<br>
+                            - Click on "Create Form" to generate the form.<br>
+                            - Once created, you will receive a form link.<br>
+                            - Copy the link and paste it into the input field where needed.<br><br>
                 
-                    11. <b>Theme Color:</b><br>
+                    12. <b>Theme Color:</b><br>
                         - Select the theme color for your portfolio.<br>
                         - <b>Note:</b> The <b>background color</b> will remain black to enhance the user experience.<br><br>
                 </p>
@@ -213,6 +220,15 @@
             </div>
 
 
+            <!--Contact Form-->
+            <div>
+                <div class="input-box">
+                    <label>Link from "Formspree" :</label>
+                    <input type="url" id="linkInput" placeholder="Enter Form Action URL">
+                </div>
+            </div>
+
+
             <div class="themecolor">
                 <label for="themecolor">Theme Color:</label>
                 <input type="color" id="themecolor" name="themecolor" required>
@@ -328,6 +344,17 @@
                 }
             }
         });
+
+
+
+        document.getElementById('linkInput').addEventListener('input', function () {
+        var link = this.value;
+        if (link) {
+            localStorage.setItem('formActionURL', link);
+        }
+    });
+
+
     </script>
     
     
