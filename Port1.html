@@ -122,14 +122,14 @@
                 </div>
             </div>
 
-            <div class="service-box">
+            <div class="service-box" id="service-box-3">
                 <div class="service-info">
                     <h4 id="service3name">Backend Development</h4>
                     <p id="service3des">fldjfofjfslf ighoepgjhiof ihgfjlkdm gerugk gheio gbuifovk giegv fvj </p>
                 </div>
             </div>
 
-            <div class="service-box">
+            <div class="service-box" id="service-box-4">
                 <div class="service-info">
                     <h4 id="service4name">Testing</h4>
                     <p id="service4des">fldjfofjfslf ighoepgjhiof ihgfjlkdm gerugk gheio gbuifovk giegv fvj </p>
@@ -198,109 +198,124 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const getItem = (key, defaultValue = "") => localStorage.getItem(key) || defaultValue;
-
-            const logofirst = getItem("logofirst");
-            const name = getItem("name", "Your Name");
-            const typingText = JSON.parse(getItem("typingText", '["Your Role"]')); // Ensures a valid array
-            const about = getItem("about", "About yourself.....");
-            const image = getItem("image");
-            const linkedinlink = getItem("linkedinlink", "#");
-            const githublink = getItem("githublink", "#");
-            const resume = getItem("resume");
-            const themeColor = getItem("themecolor", "#3498db");
-
-            const degreeyear = getItem("degreeyear");
-            const degreename = getItem("degreename");
-            const intermediateyear = getItem("intermediateyear");
-            const intermediatename = getItem("intermediatename");
-            const internshipyear = getItem("internshipyear");
-            const internshipname = getItem("internshipname");
-            const schoolyear = getItem("schoolyear");
-            const schoolname = getItem("schoolname");
-
-            const service1name = getItem("service1name");
-            const service1des = getItem("service1des");
-            const service2name = getItem("service2name");
-            const service2des = getItem("service2des");
-            const service3name = getItem("service3name");
-            const service3des = getItem("service3des");
-            const service4name = getItem("service4name");
-            const service4des = getItem("service4des");
-
-
-            document.documentElement.style.setProperty("--main-color", themeColor);
-
-            const setText = (id, text) => {
-                const el = document.getElementById(id);
-                if (el) el.textContent = text;
-            };
-
-            setText("logofirst", logofirst);
-            setText("name", name);
-            setText("about", about);
-            setText("degreeyear", degreeyear);
-            setText("degreename", degreename);
-            setText("intermediateyear", intermediateyear);
-            setText("intermediatename", intermediatename);
-            setText("internshipyear", internshipyear);
-            setText("internshipname", internshipname);
-            setText("schoolyear", schoolyear);
-            setText("schoolname", schoolname);
-            setText("service1name", service1name);
-            setText("service1des", service1des);
-            setText("service2name", service2name);
-            setText("service2des", service2des);
-            setText("service3name", service3name);
-            setText("service3des", service3des);
-            setText("service4name", service4name);
-            setText("service4des", service4des);
-
-            const imageElement = document.getElementById("image");
-            if (image && imageElement) imageElement.src = image;
-
-            const typingContainer = document.getElementById("display-typing-text");
-            if (typingContainer) {
-                let currentIndex = 0;
+        const getItem = (key, defaultValue = "") => localStorage.getItem(key) || defaultValue;
+    
+        const logofirst = getItem("logofirst");
+        const name = getItem("name", "Your Name");
+        const typingText = JSON.parse(getItem("typingText", '["Your Role"]'));
+        const about = getItem("about", "About yourself.....");
+        const image = getItem("image");
+        const linkedinlink = getItem("linkedinlink", "#");
+        const githublink = getItem("githublink", "#");
+        const resume = getItem("resume");
+        const themeColor = getItem("themecolor", "#3498db");
+    
+        const degreeyear = getItem("degreeyear");
+        const degreename = getItem("degreename");
+        const intermediateyear = getItem("intermediateyear");
+        const intermediatename = getItem("intermediatename");
+        const internshipyear = getItem("internshipyear");
+        const internshipname = getItem("internshipname");
+        const schoolyear = getItem("schoolyear");
+        const schoolname = getItem("schoolname");
+    
+        const service1name = getItem("service1name");
+        const service1des = getItem("service1des");
+        const service2name = getItem("service2name");
+        const service2des = getItem("service2des");
+        const service3name = getItem("service3name").trim();
+        const service3des = getItem("service3des").trim();
+        const service4name = getItem("service4name").trim();
+        const service4des = getItem("service4des").trim();
+    
+        // Apply theme color
+        document.documentElement.style.setProperty("--main-color", themeColor);
+    
+        // Helper function to set element text
+        const setText = (id, text) => {
+            const el = document.getElementById(id);
+            if (el) el.textContent = text;
+        };
+    
+        // Set text content for elements
+        setText("logofirst", logofirst);
+        setText("name", name);
+        setText("about", about);
+        setText("degreeyear", degreeyear);
+        setText("degreename", degreename);
+        setText("intermediateyear", intermediateyear);
+        setText("intermediatename", intermediatename);
+        setText("internshipyear", internshipyear);
+        setText("internshipname", internshipname);
+        setText("schoolyear", schoolyear);
+        setText("schoolname", schoolname);
+        setText("service1name", service1name);
+        setText("service1des", service1des);
+        setText("service2name", service2name);
+        setText("service2des", service2des);
+        setText("service3name", service3name);
+        setText("service3des", service3des);
+        setText("service4name", service4name);
+        setText("service4des", service4des);
+    
+        // Set profile image
+        const imageElement = document.getElementById("image");
+        if (image && imageElement) imageElement.src = image;
+    
+        // Cycle through the typing text
+        const typingContainer = document.getElementById("display-typing-text");
+        if (typingContainer) {
+            let currentIndex = 0;
+            typingContainer.textContent = typingText[currentIndex];
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % typingText.length;
                 typingContainer.textContent = typingText[currentIndex];
-                setInterval(() => {
-                    currentIndex = (currentIndex + 1) % typingText.length;
-                    typingContainer.textContent = typingText[currentIndex];
-                }, 3000);
-            }
-
-            const setLink = (id, url) => {
-                const el = document.getElementById(id);
-                if (el) el.href = url;
-            };
-            setLink("linkedinlink", linkedinlink);
-            setLink("githublink", githublink);
-
-            const resumeLink = document.getElementById("display-resume");
-            if (resume && resumeLink) {
-                resumeLink.href = resume;
-                resumeLink.download = "Resume.pdf";
-                resumeLink.textContent = "Download Resume";
-            }
-
-            setTimeout(() => {
-                localStorage.clear();
-                console.log("Local storage cleared after data is used.");
-            }, 1000);
-        });
-
-
-        window.onload = function () {
-            var savedAction = localStorage.getItem('formActionURL');
-            if (savedAction) {
-                document.getElementById('contactForm').action = savedAction;
+            }, 3000);
+        }
+    
+        // Set LinkedIn & GitHub links in all instances
+        const updateLinks = (selector, url) => {
+            document.querySelectorAll(selector).forEach(el => {
+                el.href = url;
+            });
+        };
+    
+        updateLinks("#linkedinlink", linkedinlink);
+        updateLinks("#githublink", githublink);
+    
+        // Handle resume download
+        const resumeLink = document.getElementById("display-resume");
+        if (resume && resumeLink) {
+            resumeLink.href = resume;
+            resumeLink.download = "Resume.pdf";
+            resumeLink.textContent = "Download Resume";
+        }
+    
+        // **Hide service sections if empty**
+        const hideEmptyService = (serviceBoxId, serviceName, serviceDesc) => {
+            const serviceBox = document.getElementById(serviceBoxId);
+            if (serviceBox && (!serviceName || !serviceDesc)) {
+                serviceBox.style.display = "none";
             }
         };
-
-
-
-
-
+    
+        hideEmptyService("service-box-3", service3name, service3des);
+        hideEmptyService("service-box-4", service4name, service4des);
+    
+        // **Clear local storage after populating the page**
+        setTimeout(() => {
+            localStorage.clear();
+            console.log("Local storage cleared after data is used.");
+        }, 1000);
+    });
+    
+    window.onload = function () {
+        var savedAction = localStorage.getItem("formActionURL");
+        if (savedAction) {
+            document.getElementById("contactForm").action = savedAction;
+        }
+    };
+    
     </script>
 
 
